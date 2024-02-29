@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roulette Predictor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="main/style.css" />
+</head>
+
+<body>
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand navtext" href="index.html">
+          <img src="img/logo.png" class="me-2" style="width:40px;"> 
+          Roulette Predictor
+        </a>
+        <div class="" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="navbar-brand" href="https://www.youtube.com/watch?v=hqunRm_dSHw" target="_blank">
+                  <img src="img/troll.png" style="width:40px;"> 
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid text-center mt-4">
+        <div id="roulette-wheel"></div> <!-- Roulette wheel element -->
+        <button class="myButton" onclick="spinAndDisplay()">Spin the Wheel!</button>
+        <p class="text-white pt-4">The roulette wheel stops at: </p>
+        <p id="result" class="emoji"></p>
+        <p class="text-white">History of last 15 spins:</p>
+        <p id="history" class="emoji"></p>
+    </div>
+</main>
+  <footer class="text-light pt-4   pb-4 fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <p class="text-center foottext">This roulette Predictor isn't a cheat or a way to make money. It's based on mathematic luck and should be only used on satire purposes.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="roulette.js"></script>
+  <script>
+      // Function to simulate spinning the roulette wheel and display the result and history
+      function spinAndDisplay() {
+          var result = spinRoulette();
+
+          // Display the result
+          document.getElementById("result").textContent = "" + result;
+
+          // Display the history
+          document.getElementById("history").textContent = "" + getSpinHistory();
+      }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  </script>
+
+</body>
+
+</html>

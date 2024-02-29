@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #010104;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#moving-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 50%; /* Adjust the height as needed */
+    animation: moveImage 4s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite forwards; /* Adjust the cubic-bezier values for desired animation */
+    transform: scale(0.5); /* Make the image smaller */
+    transform-origin: left top; /* Ensure scaling originates from the top left corner */
+    background-image: url('../img/rgb.png'); /* Replace 'your_image.jpg' with the path to your image */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+}
+
+@keyframes moveImage {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100vw - 200px); /* Adjust 200px based on your fullscreen width */
+    }
+}
+
+
+.navbar {
+    border-bottom: 1px solid #1b1b1e;
+    background-color: #010104;
+}
+
+footer {
+    border-top: 1px solid #1b1b1e;
+    background-color: #010104;
+}
+
+.navtext {
+    color: #3a31d8;
+    font-weight: bold;
+}
+
+.navtext:hover {
+    color: #3a31d8;
+    font-weight: bold;
+}
+
+.foottext {
+    color: #3a31d8;
+}
+
+
+.myButton {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    width: 280px;
+    height: 60px;
+    font-size: 20px;
+    color: #ebe9fc;
+    background: #3a31d8;
+    border: none;
+    border-radius: 100px;
+    transition: all 0.25s ease;
+}
+.myButton:hover {
+    color: #000000;
+    background: #ebe9fc;
+    border-color: none;
+} 
+
+.emoji {
+    font-size: 40px;
+}
